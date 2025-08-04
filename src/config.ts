@@ -6,20 +6,20 @@ import type {
 	SiteConfig,
 } from "./types/config";
 import { LinkPreset } from "./types/config";
-import * as url from "node:url";
 
-export let siteConfig: SiteConfig;
-siteConfig = {
+// 修复：将let改为const（仅赋值一次的变量）
+export const siteConfig: SiteConfig = {
 	title: "Durian's Blog",
 	subtitle: "",
-	lang: "zh_CN", // Language code, e.g. 'en', 'zh-CN', 'ja', etc.
+	lang: "zh-CN", // Language code, e.g. 'en', 'zh-CN', 'ja', etc.（修正为标准格式）
 	themeColor: {
 		hue: 265, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
 		fixed: false, // Hide the theme color picker for visitors
 	},
 	banner: {
 		enable: true,
-		src: ("/bg.png"), // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+		src: "/bg.png", // 移除多余括号，保留原注释
+		// Relative to the /src directory. Relative to the /public directory if it starts with '/'
 		position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
 		credit: {
 			enable: false, // Display the credit text of the banner image
@@ -45,14 +45,14 @@ siteConfig = {
 			sizes: '32x32',
 		}
 	],
-
 };
 
 export const navBarConfig: NavBarConfig = {
 	links: [
-		{ name: "首页", url: "/" },
-		{ name: "归档", url: "./archive/" },
-		{ name: "关于", url: "./about/" },
+		// 修复：替换预设为中文（保持导航功能正常）
+		{ name: "首页", url: "/" },    // 替代 LinkPreset.Home
+		{ name: "归档", url: "/archive" },  // 替代 LinkPreset.Archive
+		{ name: "关于", url: "/about" },    // 替代 LinkPreset.About
 		{
 			name: "Minecraft服务器",
 			url: "http://mc.durian.uno", // Internal links should not include the base path, as it is automatically added
@@ -63,7 +63,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	//avatar: "/durian.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	// 修复：删除重复的avatar字段，保留需要的图片路径
 	avatar: "https://cdn.luogu.com.cn/upload/image_hosting/b3ajfvw9.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "๑榴莲ฅ",
 	bio: "欢迎来到我的个人网站喵😊",
@@ -93,4 +93,3 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 	// Please select a dark theme, as this blog theme currently only supports dark background color
 	theme: "github-dark",
 };
- 
