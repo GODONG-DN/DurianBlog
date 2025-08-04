@@ -49,9 +49,13 @@ const enableBanner = siteConfig.banner.enable;
 
 let pageTitle: string;
 if (title) {
+	// 当前页面有标题（如文章页）：显示 "文章标题 - 站点标题"
 	pageTitle = `${title} - ${siteConfig.title}`;
 } else {
-	pageTitle = `${siteConfig.title} - ${siteConfig.subtitle}`;
+	// 当前页面无标题（如首页）：仅显示站点标题，如果 subtitle 存在则追加 " - 副标题"
+	pageTitle = siteConfig.subtitle
+		? `${siteConfig.title} - ${siteConfig.subtitle}`
+		: `${siteConfig.title}`; // 无副标题时直接显示主标题
 }
 
 const favicons: Favicon[] =
@@ -159,11 +163,45 @@ const bannerOffset =
 	</body>
 </html>
 
+<!--<style is:global define:vars={{-->
+<!--	bannerOffset,-->
+<!--	'banner-height-home': `${BANNER_HEIGHT_HOME}vh`,-->
+<!--	'banner-height': `${BANNER_HEIGHT}vh`,-->
+<!--}}>-->
+
 <style is:global define:vars={{
-	bannerOffset,
-	'banner-height-home': `${BANNER_HEIGHT_HOME}vh`,
-	'banner-height': `${BANNER_HEIGHT}vh`,
+	bannerOffset: '0',
+	'banner-height-home': '100vh',
+	'banner-height': '100vh'
 }}>
+	/* 强制全屏背景 */
+	#banner-wrapper {
+		position: fixed !important;
+		top: 0 !important;
+		left: 0 !important;
+		width: 100vw !important;
+		height: 100vh !important;
+		z-index: 0 !important;
+		transform: none !important;
+	}
+
+	/* 确保内容在背景之上 */
+	#main-grid {
+		position: relative;
+		z-index: 1;
+		background: rgba(var(--page-bg-rgb), 0.9);
+	}
+
+	@tailwind components;
+	@layer components {
+		.enable-banner #banner-wrapper,
+		.enable-banner.is-home #banner-wrapper {
+			height: 100vh !important;
+			transform: none !important;
+		}
+		/* 其他Tailwind样式... */
+	}
+
 @tailwind components;
 @layer components {
 	.enable-banner.is-home #banner-wrapper {

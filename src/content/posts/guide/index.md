@@ -1,10 +1,10 @@
 ---
-title: Simple Guides for Fuwari
-published: 2024-04-01
-description: "How to use this blog template."
+title: 测试文档
+published: 2025-08-04
+description: "网站测试文档"
 image: "./cover.jpeg"
-tags: ["Fuwari", "Blogging", "Customization"]
-category: Guides
+tags: ["文章"]
+category: 测试
 draft: false
 ---
 
@@ -16,9 +16,9 @@ This blog template is built with [Astro](https://astro.build/). For the things t
 
 ```yaml
 ---
-title: My First Blog Post
+title: 测试文档
 published: 2023-09-09
-description: This is the first post of my new Astro blog.
+description: "网站测试文档".
 image: ./cover.jpg
 tags: [Foo, Bar]
 category: Front-end
