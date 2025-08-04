@@ -48,9 +48,9 @@ export const siteConfig: SiteConfig = {
 
 export const navBarConfig: NavBarConfig = {
 	links: [
-		LinkPreset.主页,
-		LinkPreset.文章,
-		LinkPreset.关于,
+		LinkPreset.Home,
+		LinkPreset.Archive,
+		LinkPreset.About,
 		{
 			name: "Minecraft服务器",
 			url: "http://mc.durian.uno", // Internal links should not include the base path, as it is automatically added
