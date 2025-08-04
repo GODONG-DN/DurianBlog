@@ -6,13 +6,11 @@ import type {
 	SiteConfig,
 } from "./types/config";
 import { LinkPreset } from "./types/config";
-import * as url from "node:url";
 
-export let siteConfig: SiteConfig;
-siteConfig = {
+export const siteConfig: SiteConfig = {
 	title: "Durian's Blog",
 	subtitle: "",
-	lang: "zh_CN", // Language code, e.g. 'en', 'zh-CN', 'ja', etc.
+	lang: "zh-CN", // Language code, e.g. 'en', 'zh-CN', 'ja', etc.（修正为标准格式）
 	themeColor: {
 		hue: 265, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
 		fixed: false, // Hide the theme color picker for visitors
