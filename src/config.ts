@@ -63,7 +63,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "/durian.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	//avatar: "/durian.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	avatar: "https://cdn.luogu.com.cn/upload/image_hosting/b3ajfvw9.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "๑榴莲ฅ",
 	bio: "欢迎来到我的个人网站喵😊",
