@@ -6,11 +6,13 @@ import type {
 	SiteConfig,
 } from "./types/config";
 import { LinkPreset } from "./types/config";
+import * as url from "node:url";
 
-export const siteConfig: SiteConfig = {
+export let siteConfig: SiteConfig;
+siteConfig = {
 	title: "Durian's Blog",
 	subtitle: "",
-	lang: "zh-CN", // Language code, e.g. 'en', 'zh-CN', 'ja', etc.（修正为标准格式）
+	lang: "zh_CN", // Language code, e.g. 'en', 'zh-CN', 'ja', etc.
 	themeColor: {
 		hue: 265, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
 		fixed: false, // Hide the theme color picker for visitors
@@ -61,7 +63,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "https://cdn.luogu.com.cn/upload/image_hosting/b3ajfvw9.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	avatar: "/durian.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "๑榴莲ฅ",
 	bio: "欢迎来到我的个人网站喵😊",
 	links: [
