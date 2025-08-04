@@ -9,7 +9,7 @@ import type {
 export const siteConfig: SiteConfig = {
 	title: "Durian's Blog",
 	subtitle: "",
-	lang: "zh-CN", // Language code, e.g. 'en', 'zh-CN', 'ja', etc.（修正为标准格式）
+	lang: "zh_CN", // Language code, e.g. 'en', 'zh-CN', 'ja', etc.（修正为标准格式）
 	themeColor: {
 		hue: 265, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
 		fixed: false, // Hide the theme color picker for visitors
@@ -32,40 +32,23 @@ export const siteConfig: SiteConfig = {
 		// Leave this array empty to use the default favicon
 		{
 			src: "/icon.svg",
-<<<<<<< HEAD
 			theme: "light", // 可选：指定为浅色模式图标
 			sizes: "32x32", // 图标尺寸
-=======
-			theme: "light",         // 可选：指定为浅色模式图标
-			sizes: "32x32",         // 图标尺寸
->>>>>>> 408c9feca28cb0b9d6c986ea2d1497b7021ca8dd
 		},
 		// 可选：添加深色模式图标
 		{
 			src: "/icon.svg",
-<<<<<<< HEAD
 			theme: "dark", // 指定为深色模式图标
-			sizes: "32x32",
-		},
-=======
-			theme: "dark",          // 指定为深色模式图标
-			sizes: "32x32",
+			sizes: "32x32"
 		}
->>>>>>> 408c9feca28cb0b9d6c986ea2d1497b7021ca8dd
 	],
 };
 
 export const navBarConfig: NavBarConfig = {
 	links: [
-<<<<<<< HEAD
 		{ name: "首页", url: "./" },
 		{ name: "归档", url: "./archive/" },
 		{ name: "关于", url: "./about/" },
-=======
-		{ name: "首页", url: "/" },
-		{ name: "归档", url: "/archive" },
-		{ name: "关于", url: "/about" },
->>>>>>> 408c9feca28cb0b9d6c986ea2d1497b7021ca8dd
 		{
 			name: "Minecraft服务器",
 			url: "http://mc.durian.uno", // Internal links should not include the base path, as it is automatically added
