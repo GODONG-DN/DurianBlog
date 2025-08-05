@@ -1,5 +1,4 @@
 ---
-
 import { profileConfig } from "../config";
 import { url } from "../utils/url-utils";
 
@@ -14,6 +13,10 @@ const currentYear = new Date().getFullYear();
         &copy; <span id="copyright-year">{currentYear}</span> {profileConfig.name}. All Rights Reserved. /
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('rss.xml')}>RSS</a> /
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('sitemap-index.xml')}>Sitemap</a><br>
+        <!-- 新增备案信息 -->
+        <a class="transition link text-[var(--primary)] font-medium" href="https://icp.gov.moe/?keyword=20250286" target="_blank">
+            萌ICP备20250286号
+        </a> /
         Powered by
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://astro.build">Astro</a> &
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://github.com/saicaca/fuwari">Fuwari</a>
