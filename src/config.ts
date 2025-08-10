@@ -31,7 +31,7 @@ export const siteConfig: SiteConfig = {
 	favicon: [
 		// Leave this array empty to use the default favicon
 		{
-			src: "/icon.svg",
+			src: "/icon.png",
 			theme: "light", // 可选：指定为浅色模式图标
 			sizes: "32x32", // 图标尺寸
 		},
