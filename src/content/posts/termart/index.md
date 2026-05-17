@@ -2,7 +2,6 @@
 title: "TermArt - CLI Terminal Pixel Art Generator"
 published: 2026-05-17
 description: "A Python CLI tool that converts text, images, and GIFs into colorful terminal block art using hand-crafted pixel glyphs and CJK support."
-image: "./cover.jpg"
 tags: ["CLI", "Python", "Terminal", "Banner", "ASCII Art"]
 category: "Tools"
 draft: false
