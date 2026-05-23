@@ -39,8 +39,8 @@ export const siteConfig: SiteConfig = {
 		{
 			src: "/icon.svg",
 			theme: "dark", // 指定为深色模式图标
-			sizes: "32x32"
-		}
+			sizes: "32x32",
+		},
 	],
 };
 
